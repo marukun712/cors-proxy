@@ -5,6 +5,8 @@ import * as cors_proxy from 'cors-anywhere';
 cors_proxy.createServer({
     // 許可するオリジンを記載
     originWhitelist: ['*'],
+    requireHeader: ['origin', 'x-requested-with'],
+    removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function () {
     console.log('OHTAM CORS Anywhere起動中 ' + host + ':' + port);
 });
