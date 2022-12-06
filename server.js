@@ -5,8 +5,8 @@ var port = process.env.PORT || 8080;
 var cors_proxy = require("cors-anywhere");
 cors_proxy.createServer({
     originWhitelist: [],
-    requireHeader: ['origin', 'x-requested-with'],
-    removeHeaders: ['cookie', 'cookie2']
+    requireHeader: [],
+    removeHeaders: []
 }).listen(port, host, function () {
     console.log('OHTAM CORS Anywhere起動中 ' + host + ':' + port);
 });
